@@ -1,0 +1,10 @@
+Case #1: Draw
+Case #2: Draw
+Case #3: Game has not completed
+Case #4: X won
+Case #5: O won
+Case #6: X won
+Case #7: X won
+Case #8: Game has not completed
+Case #9: O won
+Case #10: X won
