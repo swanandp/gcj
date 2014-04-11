@@ -7,7 +7,15 @@ infile = File.open(ARGV.first)
 cases = infile.readline.strip.to_i
 cases.times do |i|
   r, t = infile.readline.strip.split(' ').map(&:to_i)
-  
-  f.puts "Case ##{i + 1}: #{[n.floor, 1].max}"
+  result, low, high = 0, 1, t
+  while low <= high
+    mid = (low + high) / 2
+    if (2 * r + 2 * mid - 1) * mid > t
+      high = mid - 1
+    else
+      low, result = mid + 1, mid
+    end
+  end
+  f.puts "Case ##{i + 1}: #{result}"
 end
 f.close
